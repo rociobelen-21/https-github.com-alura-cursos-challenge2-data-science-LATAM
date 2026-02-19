@@ -1,30 +1,65 @@
-### ***Informe Final -TelecomX LATAM***
+# 📊 Telecom X LATAM — Análisis de Churn de Clientes
 
-### **Objetivo**
-Analizar los factores asociados al abandono de clientes (churn) para identificar patrones y proponer estrategias de retención.
+## Contexto
+Telecom X enfrenta una alta tasa de cancelación de clientes (churn).  
+El objetivo de este proyecto es analizar los datos de clientes para identificar los factores que influyen en el abandono y proponer estrategias que ayuden a mejorar la retención.
 
-### **Metodología**
-Se realizó la extracción, limpieza y transformacíon de datos en Pyspark. Luego se analizaron variables demográficas, contractuales y de consumo.
 
-### **Principales** **hallazgos**
-Mayor churn en contratos **month-to-month.**
+## Objetivo
+Analizar los factores asociados al abandono de clientes (churn) para:
+- Detectar patrones relevantes.
+- Generar insights accionables.
+- Proponer estrategias de retención basadas en datos.
 
-Mayor abandono en clientes con **fibra óptica.**
 
-Los clientes que abandonan tienen:
+## Tecnologías utilizadas
+- Python
+- PySpark
+- Pandas
+- Matplotlib / Seaborn
+- Google Colab
+- API REST
 
-    menor antigüedad
 
-    mayor gasto mensual
+## Proceso ETL
 
-### **Conclusión**
-El abandono está altamente relacionado con el tipo de contrato, el servicio de internet y el costo mensual.
+### Extracción
+- Obtención de datos desde una API REST en formato JSON.
 
-### **Recomendación**
-Incentivar contratos de mayor duración.
+### Transformación
+- Normalización de estructuras anidadas.
+- Limpieza de valores nulos.
+- Conversión de tipos de datos.
+- Creación de dataset final plano para análisis.
 
-Programas de fidelización temprana.
+### Carga
+- Dataset listo para análisis exploratorio y visualización.
 
-Beneficios a clientes con alto gasto.
 
-Mejorar experiencia en fibra óptica.
+## Análisis Exploratorio (EDA)
+
+Se analizaron variables clave como:
+- Tipo de contrato.
+- Antigüedad del cliente (tenure).
+- Método de pago.
+- Cargos mensuales y totales.
+- Servicios contratados.
+
+Se realizaron visualizaciones para identificar relaciones entre estas variables y el churn.
+
+
+## Principales Hallazgos
+
+- Los clientes con **contrato mensual** presentan mayor tasa de abandono.
+- Los clientes con **baja antigüedad** tienen mayor probabilidad de churn.
+- Los métodos de pago **manuales** están asociados con mayor cancelación.
+- Los clientes con **cargos mensuales elevados** presentan mayor churn.
+
+
+## Recomendaciones de Negocio
+
+- Incentivar la migración hacia **contratos de mayor duración**.
+- Implementar **beneficios de fidelización temprana**.
+- Fomentar el uso de **pagos automáticos**.
+- Diseñar campañas preventivas para clientes con **alto riesgo de churn**.
+
